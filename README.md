@@ -1,9 +1,15 @@
-cooker-cli
-===
+# cooker-cli
 
-
+[![node][node]][node-url]
+[![npm][npm]][npm-url]
 
 `cooker-cli` 能够快速生成你能想象得到的各种模版项目: `vue2`, `vue3`, `react`, `mini-program...`
+
+## Install
+
+```
+$ npm install -g cooker-cli
+```
 
 ## What
 这个脚手架的用途是帮助你整理模版项目，模版项目需要你自己在模版库中DIY，从而在后续的使用中快速生成你要的模版项目。
@@ -14,12 +20,6 @@ cooker-cli
 
 并且即使有提供了模版，如果不能持续迭代，要不了多久，也就废弃了。所以，不如将这个功能放给使用者，这样可以使用者可以DIY项目模版，方便随时调整和迭代，从而不被脚手架所限制。
 
-
-## Install
-
-```
-$ npm install -g cooker-cli
-```
 
 ## Example
 
@@ -141,3 +141,7 @@ Run cooker-cli <command> --help 查看更多命令信息
 ## LICENSE
 MIT
 
+[npm]: https://img.shields.io/npm/v/cooker-cli.svg
+[npm-url]: https://npmjs.com/package/cooker-cli
+[node]: https://img.shields.io/node/v/cooker-cli.svg
+[node-url]: https://nodejs.org

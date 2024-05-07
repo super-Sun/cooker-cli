@@ -1,13 +1,22 @@
 {
   "name": "cooker-cli",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "脚手架，快速生成模版项目代码",
   "main": "index.js",
   "bin": {
     "cooker-cli": "./bin/cli"
   },
+  "engines": {
+    "node": ">=12.18.0"
+  },
   "author": "sunlw",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/super-Sun/cooker-cli.git"
+  },
+  "homepage": "https://github.com/super-Sun/cooker-cli",
+  "bugs": "https://github.com/super-Sun/cooker-cli/issues",
   "dependencies": {
     "axios": "^1.6.8",
     "chalk": "^4",
