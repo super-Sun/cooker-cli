@@ -128,11 +128,13 @@ Commands:
 Run cooker-cli <command> --help 查看更多命令信息
 ```
 ## Feat
-1. 支持`github`、`gitee`
+1. ✅支持`github`
+2. ✅支持`gitee`
+3. ✅支持`gitlab`
+
 
 ## TODO 
-
-1. 目前模板库`org`支持github、gitee中生成，后续会支持gitlab
+...
 
 
 
