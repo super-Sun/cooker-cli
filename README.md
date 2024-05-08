@@ -127,10 +127,12 @@ Commands:
 
 Run cooker-cli <command> --help 查看更多命令信息
 ```
+## Feat
+1. 支持`github`、`gitee`
 
 ## TODO 
 
-1. 目前模板库`org`仅支持github中生成，后续会支持gitlab，其中gitee在多次使用命令创建项目以后报错403，还在想办法解决
+1. 目前模板库`org`支持github、gitee中生成，后续会支持gitlab
 
 
 

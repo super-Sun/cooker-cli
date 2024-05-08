@@ -1,6 +1,6 @@
 {
   "name": "cooker-cli",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "脚手架，快速生成模版项目代码",
   "main": "index.js",
   "bin": {
@@ -23,9 +23,10 @@
     "commander": "^8",
     "download-git-repo": "^3.0.2",
     "fs-extra": "^10",
+    "ini": "^3",
     "inquirer": "^8",
     "ora": "^5",
-    "ini": "^3",
+    "unzipper": "^0.11.5",
     "zdex-downloadgitrepo": "^1.2.0"
   }
 }
