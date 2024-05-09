@@ -3,7 +3,12 @@
 [![node][node]][node-url]
 [![npm][npm]][npm-url]
 
-`cooker-cli` 能够快速生成你能想象得到的各种模版项目: `vue2`, `vue3`, `react`, `mini-program...`
+> `cooker-cli` 能够快速生成你能想象得到的各种模版项目:
+>
+> - 前端：`vue2`, `vue3`, `react`, `mini-program...`
+> - 客户端: `iOS`、`Android...`
+> - 后端：`Java` 、`PHP`、`Go...`
+> - ...
 
 ## Install
 
@@ -12,9 +17,10 @@ $ npm install -g cooker-cli
 ```
 
 ## What
-这个脚手架的用途是帮助你整理模版项目，模版项目需要你自己在模版库中DIY，从而在后续的使用中快速生成你要的模版项目。
 
-## WHY
+这个脚手架的用途是帮助你管理模版项目，模版项目需要你自己在模版库中DIY，从而在后续的使用中快速生成你要的模版项目。
+
+## Why
 
 根据以往业务的经验，即使在这个脚手架中提供了模版，也满足不了大多数人的需求。因为对于日益更新的技术栈，项目可以有多种多样的库搭配组合，排列组合之下，产出的模版何其多也\(^o^)/~
 
@@ -50,12 +56,18 @@ $ cooker-cli create <project-name>
 
 - 配置你自己的模版
 
-  - 1.你需要拥有一个github账号
+  > 1.如果你使用github或者gitee来存放你的模板库，可以按照以下流程配置
+  >
+  > 2.如果你使用本地私有gitlab来存放你的模板库，可以在gitlab库中创建一个`组(group)`，在这个`组(group)`中存放你的模板集合，跳过步骤1、步骤2.。
+  >
+  > Tip:`组id(groupId)`为作为脚手架配置项`gitlabGroupId`
 
-  - 2.注册组织机构账号，在github账号内即可免费注册完成
+  - 1.你需要拥有一个github/gitee账号
+
+  - 2.注册组织机构账号，在github/gitee账号内即可免费注册完成
 
     - 步骤如下
-    - create new...  --> New Organizational --> 后面按照提示完成注册即可
+    - create new...  --> New Organizational --> 后面按照提示完成注册即可(该操作为github，gitee也有类似方方式创建)
     - 得到`机构名称`  => 为了方便，统一称作 `org`
 
   - 3.在你创建的机构下，创建你的模版，这个创建的模版你将在这里看到
@@ -93,11 +105,18 @@ $ cooker-cli create <project-name>
     >
     > 恢复默认配置信息: cooker-cli config --reset
 
-  - 7.将配置中的组织名称，修改为你自己创建的`org`
+  - 7.1如果你使用github/gitee，将配置中的组织名称，修改成你自己创建的`org`
 
     ```bash
     # organization-name 默认值: niu-fly，为演示项目
     $ cooker-cli config --set=org <your github organization-name>
+    ```
+
+  - 7.2如果你使用gitlab，将你的`组(group)`的id，配置到脚手架中
+
+    ```bash
+    # organization-name 默认值: niu-fly，为演示项目
+    $ cooker-cli config --set=gitlabGroupId <your gitlab groupId>
     ```
 
   - 8.如果你在步骤5中采用tags来管理版本，那么你需要进行下面的配置
@@ -107,7 +126,26 @@ $ cooker-cli create <project-name>
     $ cooker-cli config --set=mode tags
     ```
 
-  - 9.做完以上操作，你可以完全按照自己的意愿DIY自己的模版了\(^o^)/~
+  - 9.如果你使用gitee，那么你需要在gitee界面，生成你的access-token，配置到脚手架中
+
+    ```bash
+    $ cooker-cli config --set=giteeToken <your gitee access-token>
+    ```
+
+  - 10.如果你使用github/gitee，做完以上操作，就已经完成了所有配置。你可以自由搭建的模版库了\(^o^)/~
+
+  - 11.如果你使用本地gitlab，还需要完成一下配置
+
+    ```bash
+    # 配置本地gitlab域名
+    $ cooker-cli config --set=gitlabDomain <your gitlab Domain>
+    # 配置本地gitlab域名
+    $ cooker-cli config --set=gitlabDomain <your gitlab Domain>
+    # 配置本地gitlab-token
+    $ cooker-cli config --set=gitlabToken <your gitlab token>
+    ```
+
+  - 12.所有配置都已完成，恭喜\(^o^)/~
 
 ## Usage
 
@@ -127,13 +165,16 @@ Commands:
 
 Run cooker-cli <command> --help 查看更多命令信息
 ```
+
 ## Feat
+
 1. ✅支持`github`
 2. ✅支持`gitee`
 3. ✅支持`gitlab`
 
 
 ## TODO 
+
 ...
 
 
@@ -143,6 +184,7 @@ Run cooker-cli <command> --help 查看更多命令信息
 * https://github.com/super-Sun/cooker-cli
 
 ## LICENSE
+
 MIT
 
 [npm]: https://img.shields.io/npm/v/cooker-cli.svg
