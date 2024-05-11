@@ -1,6 +1,6 @@
 {
   "name": "cooker-cli",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "脚手架，快速生成模版项目代码",
   "main": "index.js",
   "bin": {
